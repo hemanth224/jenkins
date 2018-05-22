@@ -1,0 +1,76 @@
+
+
+1. catalina.sh is the one which controls startup.sh or bat
+
+directories and files for tomcat
+
+
+2. managing jvm in tomcat in catalina.sh
+
+it has environment variables
+
+catalina jvm sizes
+
+catalina_opts=$Catalina_opts $jpda_opts
+
+disable or enable garbage collection in catalina.sh
+
+-Xms128m -Xmx256m"
+
+
+
+
+tomcat 9 ---encapsulated jvm configuration
+
+
+Out of memory application 
+
+controlling memory or memory setting using catalina_opt
+
+
+3. directories
+
+ catalina.out is the primary log file application or user error
+
+host manager---web gui errors
+
+local host error 
+
+manager is the management application errors
+
+
+temp --- contains objects cached from memory, to free up memory in heap copies
+
+
+webapps -deployment ---IN Manager app
+
+docs ---webapplication context
+
+/ ----context
+
+host manager
+
+
+Now ROOT in tomcat ---Special directory and anything kept inside root -- read war and ear files to create application and keeps application
+
+
+4. security 
+
+
+last 5 lines of tomcat-users.xml
+
+
+-->
+
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <role rolename="manager-gui"/>
+  <user username="tomcat" password="tomcat" roles="tomcat"/>
+  <user username="both" password="tomcat" roles="tomcat,role1"/>
+  <user username="role1" password="tomcat" roles="role1"/>
+  <user username="tomcat" password="tomcat" roles="manager-gui"/>
+
+</tomcat-users>
+
+
+
